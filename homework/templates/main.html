@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div class="container" style="margin: 60px auto">
+        <div class="row centered">
+            {% load static %}
+            <div class="col-md-3 col-sm-6">
+                <a href="{% url 'phone_info_url' 1 %}"><img src="{% static "images/iu.png" %}" width="262"
+                                                            height="200" hspace="15" vspace="15"
+                                                            alt="ИУ image"/></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="{% url 'phone_info_url' 2 %}"><img src="{% static "images/rt.jpg" %}" width="262"
+                                                            height="200" hspace="15" vspace="15"
+                                                            alt="iPhone8 image"/></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="{% url 'phone_info_url' 3 %}"><img src="{% static "images/e.jpg" %}" width="262"
+                                                            height="200" hspace="15" vspace="15"
+                                                            alt="iPhoneX image"/></a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="{% url 'phone_info_url' 4 %}"><img src="{% static "images/bmt.png" %}" width="262"
+                                                            height="200" hspace="15" vspace="15"
+                                                            alt="iPhone7 image"/></a>
+            </div>
+
+
+        </div>
+
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <span class="price-value">"ИУ"<span class="currency"></span></span>
+                            <h3 class="title">Факультет "ИУ"</h3>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>"ИУ5 Системы обработки информации и управления"</li>
+                            <li>"ИУ1 САУ"</li>
+                            <li>"ИУ8 Информационная безопасность" </li>
+{#                            <li>10 Subdomains</li>#}
+{#                            <li>15 Domains</li>#}
+                        </ul>
+                        <a href="{%url 'IU_url'%}" class="pricingTable-signup">Преподаватели</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricingTable green">
+                        <div class="pricingTable-header">
+                            <span class="price-value">"РТ"<span class="currency"></span></span>
+                            <h3 class="title">Факультет "РТ"</h3>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>РТ1</li>
+                            <li>РТ2</li>
+                            <li>РТ4</li>
+                            <li>"РТ5 Системы обработки информации и управления"</li>
+{#                            <li>20 Domains</li>#}
+                        </ul>
+                        <a href="{%url 'RT_url' %}" class="pricingTable-signup">Преподаватели</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricingTable orange">
+                        <div class="pricingTable-header">
+                            <span class="price-value">"Э"<span class="currency"></span></span>
+                            <h3 class="title">Факультет "Э"</h3>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>"Э1 Ракетные Двигатели"</li>
+                            <li>"Э4 Холодильная, криогенная техника, системы кондиционирования и жизнеобеспечения"</li>
+{#                            <li>70GB Monthly Bandwidth</li>#}
+{#                            <li>20 Subdomains</li>#}
+{#                            <li>25 Domains</li>#}
+                        </ul>
+                        <a href="{%url 'SM_url' %}" class="pricingTable-signup">Преподаватели</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricingTable purple">
+                        <div class="pricingTable-header">
+                            <span class="price-value">БМТ<span class="currency"></span></span>
+                            <h3 class="title">Факультет "БМТ"</h3>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>"БМТ1 Биомедицинские Технические Системы"</li>
+                            <li>"БМТ2 Биомедицинская техника"</li>
+                            <li>"БМТ4  Медико-технический менеджмент"</li>
+                        </ul>
+                        <a href="{%url 'BMT_url' %}" class="pricingTable-signup">Преподаватели</a>
+                    </div>
+                </div>
+
+            </div><!-- ./row -->
+        </div><!-- ./container -->
+    </div>
+{% endblock %}

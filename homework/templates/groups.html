@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="header1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1><br>Список групп:<br></h1>
+                <table class="table table-hover table-inverse">
+                <tr>
+{#                    <th>№</th>#}
+                    <th>ID</th>>
+                    <td>Номер группы</td>
+                    <td>Студент</td>
+                </tr>
+                {% for groups in object_list %}
+                    <tr>
+                       {#   <th scope="row">{{groups.id}}</th>#}
+                        <td>{{ groups.id_groups }}</td>
+                        <td>{{ groups.group_number }}</td>
+                        <td> {{groups.stud}} </td>
+                    </tr>
+                {% endfor %}
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

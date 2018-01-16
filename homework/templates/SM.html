@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="header1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1><br>Список преподавателей СМ:<br></h1>
+                <table class="table table-hover table-inverse">
+                <tr>
+                    <th>№</th>
+                    <td>Преподаватель</td>
+                    <td>Кафедра</td>
+                </tr>
+                {% for teacherSM in object_list %}
+                    <tr>
+                        <th scope="row">{{teacherSM.id}}</th>
+                        <td> {{teacherSM.teacher_fio}} </td>
+                        <td>{{ teacherSM.teacher_department }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

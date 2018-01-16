@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <br><br><br>
+        <div class="course-obj">
+            <div class="course-obj-photo-and-title course-obj-border-bottom">
+
+            <div class="course-obj-name">
+                <p> {{ course.group_number }} </p>
+            </div>
+            </div>
+            <div class="course-obj-tutor-and-category course-obj-border-bottom">
+
+                <div class="course-obj-category">
+                    <span class="course-obj-titles">Студенты в группе</span><br><br><br>
+                    <p class="course-obj-data">{{ course.stud }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
